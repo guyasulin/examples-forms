@@ -1,0 +1,9 @@
+<div class="phone-number-reactive">
+    <form (ngSubmit)="printPhoneNumbers()">
+        <div *ngFor="let phoneNumbers of phoneNumbers['controls']" [formGroup]="phoneNumbers">
+            <input type="text" formControlName="prefix">
+            <input type="text" formControlName="phoneNumber">
+    </div>
+    <button (click)="addPhoneNumber()">Add phone number</button>
+    </form>
+</div>

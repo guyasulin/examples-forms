@@ -1,0 +1,11 @@
+<div class="todo-autocomplete">
+
+    <h1></h1>
+
+    <input type="search" [formControl]="searchInput" (blur)="touchedCB()"> 
+    <ul>
+        <li *ngFor="let todoItem of todoItems$ | async" (click)="setTodoItem(todoItem)">
+            {{ todoItem.title  }}
+        </li>
+    </ul>
+</div>

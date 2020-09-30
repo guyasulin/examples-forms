@@ -1,0 +1,10 @@
+<div class="reactive-forms">
+    <h1>input the reactive wey</h1>
+
+    <input type="text"  [formControl]="nameFormControl">
+    {{ nameFormControl.errors | json }}
+
+    <p>
+        {{ nameFormControl.value }}
+    </p>
+</div>

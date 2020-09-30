@@ -1,0 +1,16 @@
+<div class="login-reactive">
+    <h1>FormGroup the reactive wey</h1>
+    <form [formGroup]="login" (ngSubmit)="submitLogin()">
+        <input type="email" formControlName="email" placeholder="Email.." email minlength="3">
+        <div *ngIf="login.controls['email'].errors != null">
+            <div *ngIf="login.controls['email'].errors.email">
+                the email in bad format
+            </div>
+            <div *ngIf="login.controls['email'].errors.minlength">
+                the minlength is 3
+            </div>
+        </div>
+        <input type="password" formControlName="password" placeholder="Password.." required>
+        <button type="submit">Login</button>
+    </form>
+</div>
